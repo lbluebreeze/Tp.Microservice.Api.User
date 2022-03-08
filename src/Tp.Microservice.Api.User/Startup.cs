@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Tp.Microservice.Api.User.Configuration.Startup.Cors;
 using Tp.Microservice.Api.User.Configuration.Startup.DbContext;
 using Tp.Microservice.Api.User.Configuration.Startup.Logic;
 using Tp.Microservice.Api.User.Configuration.Startup.Swagger;
@@ -68,6 +69,8 @@ namespace Tp.Microservice.Api.User
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCustomCors();
 
             app.UseEndpoints(endpoints =>
             {
