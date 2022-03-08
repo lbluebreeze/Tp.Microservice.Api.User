@@ -125,10 +125,10 @@ namespace Tp.Microservice.Api.User.Abstractions
         /// <response code="200">Retorna un booleano con el resultado de la operación</response>
         /// <response code="500">Internal Server error</response>
         [HttpDelete]
-        [Route("[action]")]
+        [Route("[action]/{id}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(500)]
-        public virtual async Task<IActionResult> Delete(int id, bool state)
+        public virtual async Task<IActionResult> Delete(int id)
         {
             var result = await this.logic.DeleteAsync<Entities.User>(id);
 

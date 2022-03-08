@@ -85,6 +85,11 @@ namespace Tp.Microservice.Api.User.Logic.Abstractions
         {
             var entity = this.context.Set<TEntity>().FirstOrDefault(x => x.Id.Equals(id));
 
+            if (entity == null)
+            {
+                return false;
+            }
+
             entity.State = state;
 
             return await this.context.SaveChangesAsync(cancellationToken) > 0;
@@ -99,6 +104,11 @@ namespace Tp.Microservice.Api.User.Logic.Abstractions
         public async Task<bool> DeleteAsync<TEntity>(int id, CancellationToken cancellationToken = default) where TEntity : class, IEntityBase
         {
             var entity = this.context.Set<TEntity>().FirstOrDefault(x => x.Id.Equals(id));
+
+            if (entity == null)
+            {
+                return false;
+            }
 
             this.context.Set<TEntity>().Remove(entity);
 
