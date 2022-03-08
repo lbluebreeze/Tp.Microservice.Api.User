@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tp.Microservice.Api.User.Data.Transfer.Objects\Tp.Microservice.Api.User.Data.Transfer.Objects.csproj" />
+    <ProjectReference Include="..\Tp.Microservice.Api.User.EntityFramework\Tp.Microservice.Api.User.EntityFramework.csproj" />
+  </ItemGroup>
+
+</Project>
