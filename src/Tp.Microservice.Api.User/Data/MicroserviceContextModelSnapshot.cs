@@ -68,6 +68,9 @@ namespace Tp.Microservice.Api.User.Data
                         .IsRequired()
                         .HasColumnType("varchar(256)");
 
+                    b.Property<string>("Phone")
+                        .HasColumnType("varchar(32)");
+
                     b.Property<bool>("State")
                         .HasColumnType("bit");
 

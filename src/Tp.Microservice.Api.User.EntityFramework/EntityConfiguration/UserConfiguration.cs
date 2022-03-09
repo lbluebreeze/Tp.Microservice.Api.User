@@ -18,6 +18,7 @@ namespace Tp.Microservice.Api.User.EntityFramework.EntityConfiguration
             builder.Property(x => x.Username).HasColumnType("varchar(128)").IsRequired();
             builder.Property(x => x.Password).HasColumnType("varchar(256)").IsRequired();
             builder.Property(x => x.Fullname).HasColumnType("varchar(256)").IsRequired();
+            builder.Property(x => x.Phone).HasColumnType("varchar(32)");
 
             builder.ConfigBase();
 

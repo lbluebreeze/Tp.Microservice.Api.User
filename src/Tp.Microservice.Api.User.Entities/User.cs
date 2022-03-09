@@ -30,6 +30,10 @@ namespace Tp.Microservice.Api.User.Entities
         /// </summary>
         public string Fullname { get; set; }
         /// <summary>
+        /// Teléfono del usuario
+        /// </summary>
+        public string Phone { get; set; }
+        /// <summary>
         /// Estado del registro
         /// </summary>
         public bool State { get; set; }
