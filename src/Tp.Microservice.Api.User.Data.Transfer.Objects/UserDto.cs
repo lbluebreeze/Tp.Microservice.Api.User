@@ -39,6 +39,7 @@ namespace Tp.Microservice.Api.User.Data.Transfer.Objects
         /// <summary>
         /// Teléfono del usuario
         /// </summary>
+        [StringLength(32)]
         public string Phone { get; set; }
         /// <summary>
         /// Estado del registro

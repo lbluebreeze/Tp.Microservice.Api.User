@@ -26,7 +26,6 @@ namespace Tp.Microservice.Api.User.Data.Transfer.Objects
         /// <summary>
         /// Descripción del hobby
         /// </summary>
-        [Required]
         [StringLength(512)]
         public string Description { get; set; }
         /// <summary>

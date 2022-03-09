@@ -73,10 +73,9 @@ namespace Tp.Microservice.Api.User.Abstractions
         /// <response code="200">Retorna el identificador del registro creado</response>
         /// <response code="500">Internal Server error</response>
         [HttpPost]
-        [Route("[action]")]
         [ProducesResponseType(200)]
         [ProducesResponseType(500)]
-        public virtual async Task<IActionResult> Post(TDto dto)
+        public virtual async Task<IActionResult> Post([FromBody] TDto dto)
         {
             var entity = this.mapper.Map<TEntity>(dto);
 
@@ -91,10 +90,9 @@ namespace Tp.Microservice.Api.User.Abstractions
         /// <response code="200">Retorna un booleano con el resultado de la operación</response>
         /// <response code="500">Internal Server error</response>
         [HttpPut]
-        [Route("[action]")]
         [ProducesResponseType(200)]
         [ProducesResponseType(500)]
-        public virtual async Task<IActionResult> Put(TDto dto)
+        public virtual async Task<IActionResult> Put([FromBody] TDto dto)
         {
             var entity = this.mapper.Map<TEntity>(dto);
 
@@ -125,7 +123,7 @@ namespace Tp.Microservice.Api.User.Abstractions
         /// <response code="200">Retorna un booleano con el resultado de la operación</response>
         /// <response code="500">Internal Server error</response>
         [HttpDelete]
-        [Route("[action]/{id}")]
+        [Route("{id}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(500)]
         public virtual async Task<IActionResult> Delete(int id)
